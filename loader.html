@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/d3b24bd8f4.js" crossorigin="anonymous"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+		.font-reddit-sans {
+			font-family: 'Reddit Sans', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="relative px-8 py-4 flex justify-between items-center bg-white">
+		<a class="text-3xl font-bold leading-none" href="#">
+			<h1 class="font-reddit-sans">loader.<span class="text-[#1563e2]">fo</span></h1>
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<div
+			class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:h-auto lg:space-x-6  ">
+			<div><a class="text-sm font-bold hover:text-gray-500" href="#"> YouTube Video Downloader</a>
+
+				<div class="w-auto h-1 bg-[#3f70b7] "></div>
+			</div>
+
+			<div><a class="text-sm font-bold hover:text-[#ecf4ff] " href="#">4k Video Downloader</a></div>
+
+			<div><a class="text-sm font-bold hover:text-gray-500" href="#">Youtube To MP3</a></div>
+
+			<div><a class="text-sm font-bold hover:text-gray-500" href="#">Youtube Playlist Downloader</a></div>
+
+			<div><a class="text-sm font-bold hover:text-gray-500" href="#">Youtube WAV</a></div>
+
+			<div><a class="text-sm font-bold hover:text-gray-500" href="#">Youtube 1080P Downloader</a></div>
+		</div>
+		<div class="hidden lg:inline-block lg:w-auto lg:h-14  lg:mr-8 px-1 py-1 bg-[#ffffff] hover:bg-gray-100text-sm text-gray-900 font-bold  rounded-full transition duration-200 shadow-md"
+			href="#">
+			<div class="w-full h-full  rounded-full flex">
+				<div class="w-28 h-full  bg-[#0175ff] rounded-full flex justify-center items-center">
+					<h1 class="text-white font-bold">Dark</h1>
+				</div>
+				<div class="w-20 h-full  rounded-full flex justify-center items-center">
+					<h1 class="text-3xl text-black"><i class="fa-solid fa-moon"></i></h1>
+				</div>
+			</div>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<nav
+			class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="text-3xl font-bold leading-none" href="#">
+					<h1 class="font-reddit-sans">loader.<span class="text-[#1563e2]">fo</span></h1>
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+						xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+						</path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">YouTube Video Downloader</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">4k Video Downloader</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">Youtube To MP3</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">Youtube Playlist Downloader</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">outube WAV</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+							href="#">Youtube 1080P Downloader</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div class="pt-6">
+					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+						href="#">Dark</a>
+					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+						href="#">Screen</a>
+				</div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2021</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+	<!-- Fist section -->
+	<div class="w-full h-full  flex justify-center items-center mt-2">
+		<div class="w-4/6 h-full  ">
+			<div class="hidden lg:flex w-11/12 h-1/6 flex justify-between items-center mx-5">
+				<div class="w-12 h-12 bg-blue-500"></div>
+				<div class="w-12 h-12 bg-[#ffdfde] rounded-full flex justify-center items-center">
+					<h1 class="text-[#e41314] font-thin text-xl"><i class="fa-brands fa-youtube"></i></h1>
+				</div>
+			</div>
+			<div class="w-full h-5/6 ">
+				<div class="w-full h-1/6 flex justify-center items-center">
+					<h1 class="font-bold text-3xl sm:text-3xl md:text-4xl lg:text-5xl">YouTube Video Downloader</h1>
+				</div>
+				<div class="w-full h-auto  flex justify-center items-center p-1 ">
+					<div class="w-full sm:w-5/6 h-full flex justify-center items-center">
+						<div class="flex flex-col sm:flex-row">
+							<div class="w-full sm:w-auto h-full m-1 flex items-end">
+								<div class="w-10 h-10 bg-[#f53a43] rounded-full mb-3 flex justify-center items-center">
+									<h1 class="text-white text-lg font-thin"><i class="fa-solid fa-music"></i></h1>
+								</div>
+							</div>
+							<div class="w-full sm:w-auto h-full m-1 flex justify-center">
+								<h1 class="text-lg sm:text-center mt-2 font-semibold">Try this unique tool for quick,
+									hassle-free downloads from YouTube. Transform your offline video collection with this reliable and efficient downloader</h1>
+							</div>
+							<div class="w-full sm:w-auto h-full m-1 flex items-end justify-center sm:justify-end">
+								<div class="w-10 h-10 bg-[#22b5f2] rounded-full mb-3 flex justify-center items-center">
+									<h1 class="text-white text-lg font-thin"><i class="fa-solid fa-play"></i></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="w-full lg:h-20  flex justify-center items-center   ">
+					<div class="w-full md:w-5/6 md:h-16 bg-white rounded-lg md:flex justify-between items-center shadow-xl   ">
+
+						<button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
+							data-dropdown-trigger="hover"
+							class="text-gray-400 shadow-xl  font-bold h-5/6 w-full mb-3 border-1 border-black sm:mt-2 lg:w-1/6  rounded-lg lg:text-md md:text-sm  px-5 py-2.5 text-center inline-flex items-center justify-center  lg:border-r-2  lg:border-gray-200 lg:shadow-none "
+							type="button">MP4 <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+									stroke-width="2" d="m1 1 4 4 4-4" />
+							</svg>
+						</button>
+
+						<!-- Dropdown menu -->
+						<div id="dropdownHover"
+							class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+							<ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+								aria-labelledby="dropdownHoverButton">
+								<li>
+									<a href="#"
+										class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+								</li>
+								<li>
+									<a href="#"
+										class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+								</li>
+								<li>
+									<a href="#"
+										class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+								</li>
+								<li>
+									<a href="#"
+										class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+										out</a>
+								</li>
+							</ul>
+						</div>
+						<div class="lg:w-7/12 lg:h-full  ">
+							<textarea name="" id="" class="w-full shadow-xl  h-full text-gray-200 p-4 text-lg lg:shadow-none"
+								placeholder="https://youtube.com/watch?vwiU03"></textarea>
+						</div>
+						<div class="w-full lg:w-3/12 h-full  flex justify-center items-center ">
+
+							<button
+								class="w-11/12 h-12 bg-blue-600 text-white font-semibold rounded-lg text-xl lg:text-md">Download</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- The Dark possition  -->
+	<div class="w-full h-full mt-5 mb-5  flex justify-center items-center">
+		<div class="w-10/12 h-16 bg-[#1e1e1e] rounded-lg text-center lg:flex justify-center items-center ">
+			<h1 class="text-lg text-white">WE DO NOT ALLOW/SUPPORT THE DOWNLOAD OF COPYRIGHTED MATERIAL!
+			</h1>
+		</div>
+	</div>
+	<!-- About loader.fo -->
+	<div class="w-full h-auto  mt-10">
+		<div class="w-full h-4/12  flex justify-center items-center">
+			<div class="w-10/12 h-full flex justify-end">
+				<div class="w-8/12 h-full ">
+					<div class="w-2/6 h-16  mt-2">
+						<div class="w-full lg:w-1/2 h-6 flex items-between ">
+							<h1 class="text-xl text-black font-semibold">What is </h1>
+						</div>
+						<div class="lg:w-1/3 h-1 bg-[#3f70b7] z-10 relative right-2 "></div>
+						<div class="w-full h-8 ">
+							<h1 class="text-2xl text-black font-bold font-reddit-sans">loader.fo </h1>
+						</div>
+					</div>
+					<div class="lg:w-10/12 h-auto  mt-2 ">
+						<h1 class="text-[14.5px] font-semibold text-black font-reddit-sans text-start">loader.fo is one
+							of the most popular downloader tools on the internet. With this tool, you can download and
+							convert videos from almost anywhere on the internet, from YouTube, Twitter, and Facebook to
+							OK.ru, TikTok, and everything in between. Functionality-wise, it's very straightforward. The
+							user is required to enter the page URL in the "URL" field, choose the format, and click
+							download.</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lg:w-full h-auto  flex justify-center items-center  mt-5 lg:mt-0">
+			<div class="lg:w-9/12 h-full bg-white lg:flex ">
+				<div class="lg:w-1/2 h-auto  flex justify-end items-end lg:mb-2">
+					<div class="lg:w-11/12 h-full lg:h-52 bg-[#0079ff] rounded-xl mb:2  ">
+						<div class="lg:w-full lg:h-40  p-5  ">
+							<div class="lg:w-11/12 lg:h-12">
+								<h1 class="text-white text-lg font-bold font-reddit-sans">Experience Buffer-Free
+									Entertainment With YouTube Video Downloader</h1>
+							</div>
+							<div class="w-10/12 lg:h-20   mt-2">
+								<h1 class="text-white text-[12px] font-reddit-sans">The YouTube Video Downloader
+									promises uninterrupted entertainment and a buffer-free experience for your favorite
+									YouTube content. This user-friendly tool helps you to download videos effortlessly,
+									eliminating the frustration of buffering.</h1>
+							</div>
+						</div>
+						<div class="lg:w-full lg:h-10  flex justify-end items-center ">
+							<div class="w-8 h-8 bg-white rounded-full mr-5">
+								<h1 class="text-[#3e7ed5] text-center text-lg"><i class="fa-solid fa-angle-right"></i>
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="lg:w-1/2 h-auto  flex justify-center items-start mt-4">
+					<div class="lg:w-9/12 lg:h-[310px] bg-[#0079ff] rounded-xl">
+						<div class="w-lg:full lg:h-64  p-5">
+							<div class="lg:w-full lg:h-16 ">
+								<h1 class="text-white text-lg font-bold font-reddit-sans">Your One-Stop Solution to
+									YouTube Video Downloading</h1>
+							</div>
+							<div class="lg:w-full lg:h-44  mt-2">
+								<h1 class="text-white text-[12px] font-reddit-sans">Tired of those annoying buffering
+									pauses ruining your YouTube binge? Well, say hello to uninterrupted entertainment
+									with loader.fo!This nifty tool not only lets you download your favorite YouTube
+									videos for free but also helps bid goodbye to those dreaded buffering
+									intervals.Imagine a world where your videos load instantly, without any
+									interruptions. That's the magic of loader.fo.like having a premium pass to
+									buffer-free streaming-just the way entertainment should be. And the best part? It
+									won't cost you a dime.</h1>
+
+							</div>
+						</div>
+						<div class="w-full h-10  flex justify-end items-center ">
+							<div class="w-8 h-8 bg-white rounded-full mr-5">
+								<h1 class="text-[#3e7ed5] text-center text-lg"><i class="fa-solid fa-angle-right"></i>
+								</h1>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--FAQ section  -->
+	<div class="w-full h-auto  flex justify-center items-center mt-9 p-8">
+		<div class="w-full h-auto bg-[#ecf4ff] mt-2  ">
+			<div class="w-full lg;h-8  mt-5 flex justify-center items-end ">
+				<div class="w-1/12 lg:h-full  flex justify-center items-center relative left-16">
+					<h1 class="text-black text-lg font-bold font-reddit-sans">FAQ</h1>
+				</div>
+				<div class="w-28 h-1 bg-[#3f70b7] z-10 relative right-10"></div>
+			</div>
+			<div class="w-full lg:h-12  flex justify-center items-center">
+				<h1 class=" text-xl lg:text-[28px] font-bold">Frequently Asked Questions</h1>
+			</div>
+			<div class="w-full lg:h-96  mt-4 p-4 flex justify-center items-center">
+				<div class="w-10/12 h-full grid  grid-cols-1 lg:grid-cols-2 gap-1">
+					<div class="w-full h-20  flex justify-start items-center gap-5">
+						<h1 class="text-lg text-black font-bold font-reddit-sans ml-3">YouTube Downloader: FAQS</h1>
+						<div class="w-8 h-8 bg-[#077aff] rounded-full flex justify-center items-center">
+							<h1 class="text-white font-bold text-xl"><i class="fa-solid fa-question"></i></h1>
+						</div>
+					</div>
+					<div class="w-full h-20  flex justify-start items-center gap-5">
+						<h1 class="text-lg text-black font-bold  ml-3">loadecfo: FAQs</h1>
+						<div class="w-8 h-8 bg-[#077aff] rounded-full flex justify-center items-center">
+							<h1 class="text-white font-bold text-xl"><i class="fa-solid fa-question"></i></h1>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="w-9/12 h-16 ">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Are there any subscription plans, or is it a one-time purchase ?
+							</h1>
+						</div>
+						<div class="w-3/12 h-16  flex justify-center items-center">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="w-9/12 h-16">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Are there any subscription plans, or is it a one-time purchase ?
+							</h1>
+						</div>
+						<div class="w-3/12 h-16  flex justify-center items-center ">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="w-9/12 h-16 ">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Can the downloader be used without providing personal information?
+							</h1>
+						</div>
+						<div class="w-3/12 h-16  flex justify-center items-center ">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="w-9/12 h-16 ">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Can the downloader be used without providing personal information?
+							</h1>
+						</div>
+						<div class="lg:w-3/12 h-16 0 flex justify-center items-center ">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="lg:w-9/12 h-16 ">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Can the downloader be used without providing personal information?
+							</h1>
+						</div>
+						<div class="w-3/12 h-16  flex justify-center items-center ">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-20  flex">
+						<div class="lg:w-9/12 h-16 ">
+							<h1 class="text-sm text-[#a0a7af] font-bold text-start ml-2 ">
+								Can the downloader be used without providing personal information?
+							</h1>
+						</div>
+						<div class="lg:w-3/12 h-16  flex justify-center items-center ">
+							<div class="w-8 h-8 bg-[#a0a9b2] rounded-full">
+								<h1 class="text-lg text-[#ecf4ff] font-bold flex justify-center items-center mt-2 "><i
+										class="fa-solid fa-angle-right"></i></h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Features -->
+	<div class="w-full lg:h-auto p-2 lg:p-0 ">
+		<div class="w-full h-8  mt-5 flex justify-center items-end ">
+			<div class="lg:w-1/12 h-full  flex justify-center items-center relative left-16">
+				<h1 class="text-black text-lg font-bold font-reddit-sans">Features</h1>
+			</div>
+			<div class="w-28 h-1 bg-[#3f70b7] z-10 relative right-10"></div>
+		</div>
+		<div class="w-full h-12  flex justify-center items-center">
+			<h1 class="text-[28px] font-bold">What Make Us Special</h1>
+		</div>
+		<div class="w-full h-auto  flex justify-center items-center p-3">
+			<div class="lg:w-10/12 lg:h-full  grid grid-cols-2 lg:grid-cols-3 gap-6 mt-7 p-1">
+				<div class="lg:w-11/12 lg:h-auto bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10  flex items-center ">
+						<div class="w-8 h-8 bg-[#067cfe] rounded-full ml-1">
+							<h1 class="text-white text-lg font-bold text-center "><i class="fa-solid fa-arrow-down"></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">No Download Limit</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">You can download all content you want without limits.</h1>
+					</div>
+				</div>
+				<div class="lg:w-11/12 lg:h-36 bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10  flex items-center ">
+						<div class="lg:w-8 lg:h-8 bg-[#f2f2fe] rounded-full ml-1">
+							<h1 class="text-[#067cfe]  text-lg font-bold text-center "><i class="fa-solid fa-dollar-sign"></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">Downloads At No Cost</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">You can convert Video and Audio content and download it for free here.</h1>
+					</div>
+				</div>
+				<div class="lg:w-11/12 lg:h-36 bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10  flex items-center ">
+						<div class="lg:w-8 lg:h-8 bg-[#f2f2fe] rounded-full ml-1">
+							<h1 class="text-[#067cfe] text-lg font-bold text-center "><i class="fa-regular fa-clock"></i></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">The Best Speeds</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">Our platform converts Audio and Video in seconds.</h1>
+					</div>
+				</div>
+				<div class="lg:w-11/12 lg:h-36 bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10 flex items-center ">
+						<div class="w-8 h-8 bg-[#f2f2fe] rounded-full ml-1">
+							<h1 class="text-[#067cfe] text-lg font-bold text-center "><i class="fa-solid fa-mug-saucer"></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">Easy to Use</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">You can convert and download content using our tool with a few clicks.</h1>
+					</div>
+				</div>
+				<div class="lg:w-11/12 lg:h-36 bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10  flex items-center ">
+						<div class="w-8 h-8 bg-[#f2f2fe] rounded-full ml-1">
+							<h1 class="text-[#067cfe] text-lg font-bold text-center "><i class="fa-solid fa-mobile-screen-button"></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">No Need For Apps</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">Since our tool is online, you can use it without having to install anything on your device.</h1>
+					</div>
+				</div>
+				<div class="lg:w-11/12 lg:h-36 bg-white rounded-xl shadow-xl p-2">
+					<div class="lg:w-full lg:h-10  flex items-center ">
+						<div class="w-8 h-8 bg-[#f2f2fe] rounded-full ml-1">
+							<h1 class="text-[#067cfe] text-lg font-bold text-center "><i class="fa-thin fa-file-shield"></i></h1>
+						</div>
+					</div>
+					<div class="lg:w-full lg:h-8  mt-1 ">
+						<h1 class="text-lg text-[#272727] font-bold font-reddit-sans ml-2">Well Secured</h1>
+					</div>
+					<div class="lg:w-full lg:h-12  mt-1">
+						<h1 class="text-xs text-[#7f7f7f] font-semibold font-reddit-sans ml-2">Our website is very well secured. We have developed this website with user security in mind.</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="w-full h-auto bg-[#1e1e1e] flex justify-center items-center mt-8 p-2">
+		<div class="lg:w-10/12 h-auto ">
+			<div class="w-1/2 h-10 mt-4 ml-2">
+				<h1 class="text-white text-2xl font-bold ">Languages</h1>
+			</div>
+			<div class="w-full lg:h-24  mt-3">
+				<h1 class="ml-2 text-md text-[#fefefe] font-bold"> <span class="text-blue-800">English</span>.  Deutsch Polski Français. Español - Ελληνικά - Latvian Lithuanian Nederlands,繁體中文・Italiano. Svenska
+					• Slovensky. Português Slovenščina Русский Dansk Suomі Български Čeština Eestlane Magyar Română・日本
+					語·한국인·Bahasa Indonesia</h1>
+			</div>
+			<div class="lg:w-11/12 h-[.1px] bg-gray-50 mt-3"></div>
+			<div class="lg:w-full h-20  flex">
+				<div class="lg:w-1/2 h-full  lg:flex items-center ">
+					<a class="text-3xl font-bold leading-none ml-2" href="#">
+						<h1 class="font-reddit-sans text-white">loader.<span class="text-[#1563e2]">fo</span></h1>
+					</a>
+				</div>
+				<div class="lg:w-1/2 w-full h-full flex lg:justify-end lg:items-center justify-end items-end">
+					<h1 class="text-[#fefefe] font-semibold text-sm">Copyright © 2022 All Rights Reseved</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	// Burger menus
+	document.addEventListener('DOMContentLoaded', function () {
+		// open
+		const burger = document.querySelectorAll('.navbar-burger');
+		const menu = document.querySelectorAll('.navbar-menu');
+
+		if (burger.length && menu.length) {
+			for (var i = 0; i < burger.length; i++) {
+				burger[i].addEventListener('click', function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle('hidden');
+					}
+				});
+			}
+		}
+
+		// close
+		const close = document.querySelectorAll('.navbar-close');
+		const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+		if (close.length) {
+			for (var i = 0; i < close.length; i++) {
+				close[i].addEventListener('click', function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle('hidden');
+					}
+				});
+			}
+		}
+
+
+	});
+</script>
+
+</html>
